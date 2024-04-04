@@ -1,7 +1,7 @@
-import { BaseSchema } from '@app/shared/schemas/base.schema';
-import { User } from '@app/user/user.schema';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
+import { BaseSchema } from '../../shared/schemas/base.schema';
+import { User } from '../../user/user.schema';
 
 @Schema({
   versionKey: false,

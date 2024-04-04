@@ -1,9 +1,9 @@
+import { Model } from 'mongoose';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Comment } from '../schemas/comment.schema';
-import { Model } from 'mongoose';
-import { Post } from '@app/posts/schemas/post.schema';
-import { User } from '@app/user/user.schema';
+import { Post } from '../../posts/schemas/post.schema';
+import { User } from '../../user/user.schema';
 import { PersistCommentDto } from '../dto/persist-comment.dto';
 
 @Injectable()

@@ -9,15 +9,15 @@ import {
   Query,
   UnprocessableEntityException,
 } from '@nestjs/common';
-import { PostsService } from '@app/posts/services/posts.service';
-import { CurrentUser } from '@app/auth/decorators/current-user.decorator';
-import { User, UserDocument } from '@app/user/user.schema';
-import { PersistPostDto } from '@app/posts/dto/persist-post.dto';
-import { AuthGuard } from '@app/auth/guards/auth.guard';
-import { whitelistParams } from '@app/posts/utils/whitelist-params';
 import { isObjectIdOrHexString } from 'mongoose';
+import { PostsService } from '../posts/services/posts.service';
+import { CurrentUser } from '../auth/decorators/current-user.decorator';
+import { User, UserDocument } from '../user/user.schema';
+import { PersistPostDto } from '../posts/dto/persist-post.dto';
+import { AuthGuard } from '../auth/guards/auth.guard';
+import { whitelistParams } from '../posts/utils/whitelist-params';
 import { PersistCommentDto } from './dto/persist-comment.dto';
-import { CommentsService } from '@app/posts/services/comments.service';
+import { CommentsService } from '../posts/services/comments.service';
 
 @Controller('posts')
 export class PostsController {

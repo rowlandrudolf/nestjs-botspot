@@ -1,15 +1,15 @@
-import { UserService } from '@app/user/user.service';
 import {
   Injectable,
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { compare } from 'bcrypt';
-import { RegisterDto } from '../shared/dto/register.dto';
-import { User, UserDocument, UserResponseType } from '@app/user/user.schema';
 import { sign } from 'jsonwebtoken';
-import { LoginDto } from '@app/shared/dto/login.dto';
+import { compare } from 'bcrypt';
+import { UserService } from '../user/user.service';
+import { RegisterDto } from '../shared/dto/register.dto';
+import { User, UserDocument, UserResponseType } from '../user/user.schema';
+import { LoginDto } from '../shared/dto/login.dto';
 
 @Injectable()
 export class AuthService {

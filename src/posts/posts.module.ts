@@ -1,13 +1,12 @@
 import { Module } from '@nestjs/common';
-import { PostsService } from '@app/posts/services/posts.service';
-import { PostsController } from '@app/posts/posts.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Post, PostSchema } from '@app/posts/schemas/post.schema';
+import { PostsService } from '../posts/services/posts.service';
+import { PostsController } from '../posts/posts.controller';
+import { Post, PostSchema } from '../posts/schemas/post.schema';
 import { Comment, CommentSchema } from './schemas/comment.schema';
 import { CommentsService } from './services/comments.service';
-import { Follow, FollowSchema } from '@app/profiles/follow.schema';
-import { User, UserSchema } from '@app/user/user.schema';
-
+import { Follow, FollowSchema } from '../profiles/follow.schema';
+import { User, UserSchema } from '../user/user.schema';
 
 @Module({
   imports: [

@@ -1,11 +1,10 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-
 import { InjectModel } from '@nestjs/mongoose';
-import { Post, PostDocument } from '../schemas/post.schema';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
-import { User, UserDocument } from '@app/user/user.schema';
+import { Post, PostDocument } from '../schemas/post.schema';
+import { User, UserDocument } from '../../user/user.schema';
 import { PersistPostDto } from '../dto/persist-post.dto';
-import { Follow, FollowDocument } from '@app/profiles/follow.schema';
+import { Follow, FollowDocument } from '../../profiles/follow.schema';
 import { Comment, CommentDocument } from '../schemas/comment.schema';
 
 @Injectable()

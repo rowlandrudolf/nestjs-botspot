@@ -1,8 +1,7 @@
-import { User } from '@app/user/user.schema';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-
+import { User } from '../user/user.schema';
 import { Follow } from './follow.schema';
 import { ProfileSearchType, ProfileType } from './profiles.type';
 

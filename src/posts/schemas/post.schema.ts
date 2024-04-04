@@ -1,9 +1,7 @@
-import { User } from '@app/user/user.schema';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
-import { Comment } from '@app/posts/schemas/comment.schema';
-import * as denormalize from 'mongoose-denormalize';
-
+import { User } from '../../user/user.schema';
+import { Comment } from '../../posts/schemas/comment.schema';
 @Schema({
   versionKey: false,
   timestamps: true,

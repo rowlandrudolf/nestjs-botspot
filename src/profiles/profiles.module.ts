@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Follow, FollowSchema } from '@app/profiles/follow.schema';
-import { ProfilesController } from '@app/profiles/profiles.controller';
-import { ProfilesService } from '@app/profiles/profiles.service';
-import { User, UserSchema } from '@app/user/user.schema';
+import { Follow, FollowSchema } from '../profiles/follow.schema';
+import { ProfilesController } from '../profiles/profiles.controller';
+import { ProfilesService } from '../profiles/profiles.service';
+import { User, UserSchema } from '../user/user.schema';
 
 @Module({
   imports: [

@@ -1,6 +1,3 @@
-import { CurrentUser } from '@app/auth/decorators/current-user.decorator';
-import { AuthGuard } from '@app/auth/guards/auth.guard';
-import { User } from '@app/user/user.schema';
 import {
   Controller,
   Delete,
@@ -10,6 +7,9 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
+import { CurrentUser } from '../auth/decorators/current-user.decorator';
+import { AuthGuard } from '../auth/guards/auth.guard';
+import { User } from '../user/user.schema';
 import { ProfilesService } from './profiles.service';
 
 @Controller('profiles')

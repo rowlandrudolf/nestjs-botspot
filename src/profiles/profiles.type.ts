@@ -1,4 +1,4 @@
-import { User } from '@app/user/user.schema';
+import { User } from '../user/user.schema';
 
 export type ProfileType = Omit<User, 'email' | 'password'> & {
   following: boolean;
