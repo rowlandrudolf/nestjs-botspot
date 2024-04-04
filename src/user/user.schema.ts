@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 import { hash } from 'bcrypt';
-import { BaseSchema } from '@app/shared/schemas/base.schema';
+import { BaseSchema } from '../shared/schemas/base.schema';
 
 export type UserDocument = HydratedDocument<User>;
 export type UserResponseType = Omit<User, 'password'> & { token: string };

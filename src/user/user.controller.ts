@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Put, Query } from '@nestjs/common';
-import { UserService } from '@app/user/user.service';
-import { CurrentUser } from '@app/auth/decorators/current-user.decorator';
+import { UserService } from '..//user/user.service';
+import { CurrentUser } from '../auth/decorators/current-user.decorator';
 import { UserDocument } from './user.schema';
 import { UpdateUserDto } from './dto/update-user.dto';
 
