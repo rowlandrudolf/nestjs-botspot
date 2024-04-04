@@ -1,12 +1,10 @@
-import { AuthGuard } from '@app/auth/guards/auth.guard';
-import { Body, Controller, Get, Put, Query, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Put, Query } from '@nestjs/common';
 import { UserService } from '@app/user/user.service';
 import { CurrentUser } from '@app/auth/decorators/current-user.decorator';
 import { UserDocument } from './user.schema';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller('user')
-// @UseGuards(AuthGuard)
 export class UserController {
   constructor(private readonly userService: UserService) {}
 

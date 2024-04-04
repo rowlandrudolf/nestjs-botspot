@@ -22,21 +22,6 @@ export class User extends BaseSchema {
 
 export const UserSchema = SchemaFactory.createForClass(User);
 
-// UserSchema.path('email').validate(async function (email) {
-//   console.log(mongoose.models);
-//   const emailExists = await mongoose.models.User.countDocuments({
-//     email: new RegExp(`^${email}`, 'i'),
-//   });
-//   return !emailExists;
-// }, 'Email exists');
-
-// UserSchema.path('username').validate(async function (username) {
-//   const emailExists = await mongoose.models.User.countDocuments({
-//     username: new RegExp(`^${username}`, 'i'),
-//   });
-//   return !emailExists;
-// }, 'Username taken');
-
 UserSchema.pre<User>('save', async function (next) {
   this.password = await hash(this.password, 10);
   next();
